@@ -20,6 +20,9 @@ library(palmerpenguins)
 
 Cargue a RStudio el conjunto de datos "Pingüinos" del paquete datos. Pinguinos incluye medidas de especies de las islas del Archipelago de Palmer, incluye tamaño(largo de aleta, masa corporal, dimensiones de pico) y sexo de los pinguinos. Muestro la siguiente tabla donde se visualizan las 5 primeras observaciones del conjunto de datos.
 
+![image](https://github.com/user-attachments/assets/affd8ba6-fbc7-4b72-a040-de1c6938c48e)
+
+
 ```{r encabezado de datos}
 head(penguins)
 ```
