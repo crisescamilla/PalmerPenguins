@@ -32,20 +32,28 @@ head(penguins)
 ```{r}
 str(penguins)
 ```
+![image](https://github.com/user-attachments/assets/df142f10-d04a-41bc-a0ca-54dca64a5f8f)
+
 
 Identifique las especies de pinguinos, las islas y los años de la información que contiene "penguins"
 
 ```{r species}
 unique(penguins$species)
 ```
+![image](https://github.com/user-attachments/assets/db918c28-5f4f-4bfd-8c48-e9fdeecc9b8c)
 
 ```{r islad}
 unique(penguins$island)
 ```
+![image](https://github.com/user-attachments/assets/38ebb77e-0019-467c-aeea-04cfedf36880)
 
 ```{r}
 unique(penguins$year)
 ```
+![image](https://github.com/user-attachments/assets/79d85fcf-911d-4a90-8a31-69c3f0c25a56)
+
+
+
 
 Se instala la libreria modelsummary y con la función datasummary_skim() se genera el siguiente resumen de datos
 
@@ -53,6 +61,8 @@ Se instala la libreria modelsummary y con la función datasummary_skim() se gene
 library(modelsummary)
 datasummary_skim(penguins)
 ```
+![image](https://github.com/user-attachments/assets/9817d928-e44a-4169-a834-e17f8819472c)
+
 
 **¿Cuánto miden en promedio el largo y alto de los picos de los pinguinos de la muestra?**
 
@@ -70,6 +80,9 @@ penguins%>%
             "maximo" = max(flipper_length_mm, na.rm = TRUE),
             "madia" = mean(flipper_length_mm, na.rm = TRUE))
 ```
+![image](https://github.com/user-attachments/assets/e8f40e74-4718-419e-b95c-f8eed122af0d)
+
+
 
 ### Visualización de datos
 
@@ -87,6 +100,7 @@ penguins%>%
        y= " ",
        color = "Especie de pinguino")
 ```
+![image](https://github.com/user-attachments/assets/1ed73c2f-f045-4a6c-a24d-59dc10d2df41)
 
 
 
@@ -102,6 +116,9 @@ Utilizando la ggplot y geom_point muestra un diagrama de dispersion de las espec
 	  labs(title = "Palmer Penguins: Body mass vd. Flipper Length", subtitle = "Sample of Three Penguins Species", 
 	  caption = "Data collect by Dr. Kristen Gorman")
 ```
+![image](https://github.com/user-attachments/assets/d7c5da5a-dbe4-484b-9c01-cab417b0914a)
+
+
 
 Para tener una mejor visualización se agrega al código la función facet_wrap(~)
 
@@ -111,6 +128,9 @@ ggplot(data = penguins)+
   facet_wrap(~species)+
   labs(title = "Palmer Penguins: Body Mass vs Flipper length")
 ```
+![image](https://github.com/user-attachments/assets/5ff6e836-6219-4aac-927a-383602e4919e)
+
+
 
 ### En este ultimo diagrama se muestran las especies separadas por tipo de sexo.
 
@@ -119,3 +139,4 @@ ggplot(data = penguins)+
   geom_point(mapping = aes(x=flipper_length_mm, y=body_mass_g, color=species))+
   facet_grid(sex~species) 
 ```
+![image](https://github.com/user-attachments/assets/88865889-4cbc-44de-ae9b-c6200ae00911)
